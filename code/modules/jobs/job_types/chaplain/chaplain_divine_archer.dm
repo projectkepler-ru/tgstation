@@ -61,3 +61,4 @@
 	equip_delay_other = 50
 	resistance_flags = NONE
 	can_be_tied = FALSE
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION
