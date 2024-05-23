@@ -80,7 +80,7 @@
 		if(isnull(candidate))
 			return
 		victim.start_pulling(candidate, supress_message = TRUE)
-		victim.visible_message(span_warning("[victim][victim.p_s()] [current_bodypart] instinctually starts feeling [candidate]!"))
+		victim.visible_message(span_warning("[victim][victim.p_s()]\'s [current_bodypart] instinctually starts feeling [candidate]!"))
 		return
 
 	if(HAS_TRAIT(victim, TRAIT_IMMOBILIZED))
@@ -127,7 +127,7 @@
 		if(BODY_ZONE_R_LEG)
 			part_type = /obj/item/bodypart/leg/right/flesh
 
-	target.visible_message(span_danger("[src] [target_part ? "tears off and attaches itself" : "attaches itself"] to where [target][target.p_s()] limb used to be!"))
+	target.visible_message(span_danger("[src] [target_part ? "tears off and attaches itself" : "attaches itself"] to where [target][target.p_s()]\'s limb used to be!"))
 	var/obj/item/bodypart/new_bodypart = new part_type()
 	forceMove(new_bodypart)
 	new_bodypart.replace_limb(target, TRUE)
