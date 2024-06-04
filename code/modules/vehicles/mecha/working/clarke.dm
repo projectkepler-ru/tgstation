@@ -92,8 +92,6 @@
 			boulder_data["name"] = boulder.name
 			boulder_data["icon"] = boulder.icon_state
 			contents_grouped[boulder.icon_state] = boulder_data
-		else
-			contents_grouped[boulder.icon_state]["amount"] += boulder.amount
 	var/list/data = list(
 		"snowflake_id" = MECHA_SNOWFLAKE_ID_OREBOX_MANAGER,
 		"contents" = contents_grouped,
