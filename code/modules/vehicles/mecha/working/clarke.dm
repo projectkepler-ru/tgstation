@@ -86,6 +86,14 @@
 			contents_grouped[item.icon_state] = ore_data
 		else
 			contents_grouped[item.icon_state]["amount"] += item.amount
+	for(var/obj/item/boulder/boulder as anything in contents)
+		if(isnull(contents_grouped[boulder.icon_state]))
+			var/boulder_data = list()
+			boulder_data["name"] = boulder.name
+			boulder_data["icon"] = boulder.icon_state
+			contents_grouped[boulder.icon_state] = boulder_data
+		else
+			contents_grouped[boulder.icon_state]["amount"] += boulder.amount
 	var/list/data = list(
 		"snowflake_id" = MECHA_SNOWFLAKE_ID_OREBOX_MANAGER,
 		"contents" = contents_grouped,
